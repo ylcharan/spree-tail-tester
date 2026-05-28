@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Modal } from './Modal';
-import { useApp } from '../contexts/AppContext';
+import { useState } from "react";
+import { Modal } from "./Modal";
+import { useApp } from "../contexts/AppContext";
 
 export function NamePromptModal() {
   const { showNameModal, setCurrentUserName } = useApp();
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   return (
     <Modal title="Welcome" open={showNameModal} onClose={() => {}}>
@@ -27,7 +27,7 @@ export function NamePromptModal() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200"
-            placeholder="e.g. Vikas"
+            placeholder="e.g. John Doe"
           />
         </label>
         <button
